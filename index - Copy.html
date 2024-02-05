@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumik Calculator</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   background-color: antiquewhite;
+}
+.calculator{
+    background-color: rgb(61, 87, 91);
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 8px 8px 15px black;
+}
+.calculator form input{
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    color: rgb(248, 246, 246);
+    background-color: transparent;
+    border-radius: 1rem;
+    box-shadow: -8px 8px 15px rgb(9, 9, 9);
+    margin: 10px;
+    text-align: center;
+}
+form input.display{
+    display: flex;
+    width: 320px;
+    height: 50px;
+    font-size: 45px;
+    text-align: right;
+}
+form input.equal{
+    width: 145px;
+}
+.h1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 5vh;
+}
+    </style>
+</head>
+<body>
+    <h1 class="h1">Wellcome to Soumik's Calculator</h1>
+    <div class="container">
+        <div class="calculator">
+            <form action="">
+                <div>
+                    <input type="text" name="display" value=""class="display" >
+                </div>
+                <div>
+                    <input type="button" value="AC"  onclick="display.value = ''">
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                    <input type="button" value="." onclick="display.value += value">
+                    <input type="button" value="/" onclick="display.value += value">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value += value">
+                    <input type="button" value="8" onclick="display.value += value">
+                    <input type="button" value="9" onclick="display.value += value">
+                    <input type="button" value="*" onclick="display.value += value">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value += value">
+                    <input type="button" value="5" onclick="display.value += value">
+                    <input type="button" value="6" onclick="display.value += value">
+                    <input type="button" value="-" onclick="display.value += value">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value += value">
+                    <input type="button" value="2" onclick="display.value += value">
+                    <input type="button" value="3" onclick="display.value += value">
+                    <input type="button" value="+" onclick="display.value += value">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="display.value += value">
+                    <input type="button" value="0" onclick="display.value += value">
+                    <input type="button" value="="onclick="display.value = eval(display.value)" class="equal">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
